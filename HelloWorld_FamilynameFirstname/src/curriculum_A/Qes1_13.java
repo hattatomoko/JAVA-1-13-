@@ -21,7 +21,7 @@ public class Qes1_13 {
 	l = 0;
 	f = 0.0f;
 	d = 0.0d;
-	c = '\0';
+	c = ' ';
 	str = null;
 	bool = false;
 	
@@ -32,6 +32,7 @@ public class Qes1_13 {
 	l = 10000;
 	f = 9.5f;
 	d = 10.5d;
+	c = 'a';
     str = "ハロー";
     bool = true;
     
@@ -40,10 +41,10 @@ public class Qes1_13 {
     System.out.println(l + i + s + b);
     
     // 20
-    System.out.println(b + b);
+    System.out.println(f + d);
     
     // a ハロー　true
-    System.out.println("a" + str +  bool);
+    System.out.println(c + str +  bool);
     
     // 11130
     int x = 11110;
@@ -84,7 +85,7 @@ public class Qes1_13 {
     /* 変数BMIに計算式いれる */  
     double bmi = weight / ((height / 100) * (height / 100));
     /* BMI出力 */  
-    System.out.println("BMIは" + bmi + "です");
+    System.out.println("BMIは" + (double)Math.round(bmi) + "です");
     
 // 再代入
     n = "鈴木一郎";
@@ -100,7 +101,7 @@ public class Qes1_13 {
     System.out.println("好きな食べ物は" + food + "です");
     
     bmi = weight / ((height / 100) * (height / 100));
-    System.out.println("BMIは" + bmi + "です");
+    System.out.println("BMIは" + (double)Math.round(bmi) + "です");
     
 // 和算で自己代入
     System.out.println("初めまして" + n +"です");
@@ -110,7 +111,7 @@ public class Qes1_13 {
     System.out.println("好きな食べ物は" + food + "です");
     
     bmi = weight / ((height / 100) * (height / 100) * 2);
-    System.out.println("BMIは" + bmi + "です");
+    System.out.println("BMIは" + (double)Math.round(bmi) + "です");
     
 // 年齢が25歳以上ならtrueが出力
     /* 変数resultにage>25がtrueかfalseかを入れる*/  
