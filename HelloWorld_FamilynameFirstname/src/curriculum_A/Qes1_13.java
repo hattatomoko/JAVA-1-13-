@@ -61,21 +61,18 @@ public class Qes1_13 {
     System.out.println(b - s);
     
 //「ハローJAVA2023」
-    String cate = "ハローJAVA";
-    int code = 2023;
-    /* 整数型と文字列型をたす */    
-    String name = cate + code;
-    /* 変数nameを出力 */  
-    System.out.println(name); 
+    int num=20;
+    int num1=23;
+    System.out.println("ハローJAVA"+(num+num1)+ "\r\n");
     
 //『山田太郎 18歳 170.5cm 62.2kg 寿司』
-    String n = "山田太郎";
+    String name = "山田太郎";
     int age =18;
     double height = 170.5; 
     double weight = 62.2; 
     String food = "寿司";
     
-    System.out.println("初めまして" + n +"です");
+    System.out.println("初めまして" + name +"です");
     System.out.println("年齢は" + age + "歳です");
     System.out.println("身長は" + height + "cmです");
     System.out.println("体重は" + weight + "kgです");
@@ -85,33 +82,36 @@ public class Qes1_13 {
     /* 変数BMIに計算式いれる */  
     double bmi = weight / ((height / 100) * (height / 100));
     /* BMI出力 */  
-    System.out.println("BMIは" + (double)Math.round(bmi) + "です");
+    System.out.println("BMIは" + ((double)Math.round(bmi * 10)/10) + "です\r\n");
+    
     
 // 再代入
-    n = "鈴木一郎";
+    name = "鈴木一郎";
     age = 24;
     height = 168.5;
     weight = 64.2;
     food = "オムライス";
     
-    System.out.println("初めまして" + n +"です");
+    System.out.println("初めまして" + name +"です");
     System.out.println("年齢は" + age + "歳です");
     System.out.println("身長は" + height + "cmです");
     System.out.println("体重は" + weight + "kgです");
     System.out.println("好きな食べ物は" + food + "です");
     
     bmi = weight / ((height / 100) * (height / 100));
-    System.out.println("BMIは" + (double)Math.round(bmi) + "です");
+    System.out.println("BMIは" + ((double)Math.round(bmi * 10)/10) + "です\r\n");
+    
     
 // 和算で自己代入
-    System.out.println("初めまして" + n +"です");
+    System.out.println("初めまして" + name +"です");
     System.out.println("年齢は" + age * 2 + "歳です");
     System.out.println("身長は" + height * 2 + "cmです");
     System.out.println("体重は" + weight * 2 + "kgです");
     System.out.println("好きな食べ物は" + food + "です");
     
     bmi = weight / ((height / 100) * (height / 100) * 2);
-    System.out.println("BMIは" + (double)Math.round(bmi) + "です");
+    System.out.println("BMIは" + ((double)Math.round(bmi * 100)/100) + "です\r\n");
+    
     
 // 年齢が25歳以上ならtrueが出力
     /* 変数resultにage>25がtrueかfalseかを入れる*/  
