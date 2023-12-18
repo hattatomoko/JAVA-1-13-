@@ -21,7 +21,7 @@ public class Qes1_13 {
 	l = 0;
 	f = 0.0f;
 	d = 0.0d;
-	c = ' ';
+	c = '\u0000';
 	str = null;
 	bool = false;
 	
@@ -37,33 +37,32 @@ public class Qes1_13 {
     bool = true;
     
 // コンソールに出力
-    // 11110
+// 11110
     System.out.println(l + i + s + b);
     
-    // 20
-    System.out.println(f + d);
+// 20
+    System.out.println(Math.round( f + d));
     
-    // a ハロー　true
+// a ハロー　true
     System.out.println(c + str +  bool);
     
-    // 11130
-    int x = 11110;
-    int y = 20;
-    System.out.println(x + y);
+// 11130
+    System.out.println(Math.round(l + i + s + b + f + d));
     
-    // 10000000000
+// 10000000000
     System.out.println(b * s * i * l );
     
-    // 0.105
+// 0.105
     System.out.println(d / s);
     
-    // -90    
+// -90    
     System.out.println(b - s);
     
 //「ハローJAVA2023」
+// 文字列型numを整数型に変更
     int num=20;
     int num1=23;
-    System.out.println("ハローJAVA"+(num+num1)+ "\r\n");
+    System.out.println("ハローJAVA" + (num + num1) + "\r\n");
     
 //『山田太郎 18歳 170.5cm 62.2kg 寿司』
     String name = "山田太郎";
@@ -79,9 +78,9 @@ public class Qes1_13 {
     System.out.println("好きな食べ物は" + food + "です");
     
 // BMIを出力
-    /* 変数BMIに計算式いれる */  
+// 変数BMIに計算式いれる
     double bmi = weight / ((height / 100) * (height / 100));
-    /* BMI出力 */  
+// BMI出力 
     System.out.println("BMIは" + ((double)Math.round(bmi * 10)/10) + "です\r\n");
     
     
@@ -103,26 +102,35 @@ public class Qes1_13 {
     
     
 // 和算で自己代入
+    name = "鈴木一郎";
+    age = 24 * 2;
+    height = 168.5 * 2;
+    weight = 64.2 * 2;
+    food = "オムライス";
+    
     System.out.println("初めまして" + name +"です");
-    System.out.println("年齢は" + age * 2 + "歳です");
-    System.out.println("身長は" + height * 2 + "cmです");
-    System.out.println("体重は" + weight * 2 + "kgです");
+    System.out.println("年齢は" + age  + "歳です");
+    System.out.println("身長は" + height + "cmです");
+    System.out.println("体重は" + weight + "kgです");
     System.out.println("好きな食べ物は" + food + "です");
     
-    bmi = weight / ((height / 100) * (height / 100) * 2);
+    bmi = weight / ((height / 100) * (height / 100));
     System.out.println("BMIは" + ((double)Math.round(bmi * 100)/100) + "です\r\n");
     
     
 // 年齢が25歳以上ならtrueが出力
-    /* 変数resultにage>25がtrueかfalseかを入れる*/  
+// 変数resultにage>25がtrueかfalseかを入れる 
     boolean result = age >= 25 ? true : false;
-    /* 出力 */  
+// 出力
     System.out.println(result);
     
 // 【年齢、身長、体重】を文字列型に変換
-    /* 整数型のintをStringに変換*/  
+    age = 24;
+    height = 168.5;
+    weight = 64.2;
+// 整数型のintをStringに変換  
     String si = Integer.valueOf(age).toString();
-    /* 浮動小数点型のdoubleをStingに変換 */  
+// 浮動小数点型のdoubleをStingに変換 
     String sd = Double.valueOf(height).toString();
     String sdd = Double.valueOf(weight).toString();
     
@@ -131,20 +139,20 @@ public class Qes1_13 {
     System.out.println(sdd);
     
 // 変換した【年齢、身長】を整数型に変換
-    /*文字列型の変数siを int型に変更 */  
+// 文字列型の変数siを int型に変更 
     Integer agei = Integer.valueOf(si);
     int Age = agei.intValue();
     System.out.println(Age);
     
-    /*文字列型の変数sdを double型に変更 */  
+// 文字列型の変数sdを double型に変更  
     Double h = Double.valueOf(sd);
     double Height = h.doubleValue();
     System.out.println(Height);
     
 // 年齢が25もしくは身長が160以上
-    /* 変数ResultにAge > 25 か Height>160が trueかfalseか入れる*/  
+// 変数ResultにAge > 25 か Height>160が trueかfalseか入れる
     boolean Result = Age >= 25 || Height >= 160 ? true : false;
-    /*出力する */  
+// 出力する 
     System.out.println(Result);
   }
 }
