@@ -103,9 +103,9 @@ public class Qes1_13 {
     
 // 和算で自己代入
     name = "鈴木一郎";
-    age = 24 * 2;
-    height = 168.5 * 2;
-    weight = 64.2 * 2;
+    age += 24;
+    height += 168.5;
+    weight += 64.2;
     food = "オムライス";
     
     System.out.println("初めまして" + name +"です");
@@ -117,7 +117,10 @@ public class Qes1_13 {
     bmi = weight / ((height / 100) * (height / 100));
     System.out.println("BMIは" + ((double)Math.round(bmi * 100)/100) + "です\r\n");
     
-    
+// 再代入   
+    age = 24;
+    height = 168.5;
+    weight = 64.2;
 // 年齢が25歳以上ならtrueが出力
 // 変数resultにage>25がtrueかfalseかを入れる 
     boolean result = age >= 25 ? true : false;
@@ -125,9 +128,6 @@ public class Qes1_13 {
     System.out.println(result);
     
 // 【年齢、身長、体重】を文字列型に変換
-    age = 24;
-    height = 168.5;
-    weight = 64.2;
 // 整数型のintをStringに変換  
     String si = Integer.valueOf(age).toString();
 // 浮動小数点型のdoubleをStingに変換 
