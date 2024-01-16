@@ -47,6 +47,7 @@ public class Qes1_3 {
 	    
 // 自分の手の値
 		System.out.println(userName + "の手は"+ janken_name[number]);
+		
 		 
 // Randomクラスのインスタンスを初期化
 		Random rand = new Random();
@@ -55,6 +56,11 @@ public class Qes1_3 {
 // 相手の手の値
 		System.out.println("相手の手は" + janken_name[computer_num]);
 		System.out.println("");
+
+//名前を正しく入力したときに動く
+		if (number <=-1 || number >= 3) {
+			System.out.println("【エラー】入力できるのは「0～2」です");
+		}
 		
 // 結果		
 // 自分がじゃんけんに勝ったとき		
@@ -90,8 +96,8 @@ public class Qes1_3 {
 			System.out.println("DRAW あいこ もう一回しましょう！");
 			System.out.println("");
          }
-	  }  
-   }
+	  }  scanner.close();
+   } 
 }
 
 
