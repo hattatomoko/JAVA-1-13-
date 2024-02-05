@@ -9,11 +9,9 @@ public class animal {
 		// TODO 自動生成されたメソッド・スタブ
 		// Q1：dogクラスを呼び出して変数に代入し、動物の名前をコンソールに出力してください。
 		dog getting = new dog();
-		String get = getting.name;
 		System.out.println(getting.name);
 		// Q2：dogクラスを呼び出して変数に代入し、動物の数をコンソールに出力してください。
-		dog gettings = new dog();
-		int kosuu = gettings.count;
+		dog gettings = new dog(3);
 		System.out.println(gettings.count);
 		
 		// 現在の日時を「yyyy-MM-dd H:m:s」形式で変数に代入して、コンソールに出力してください
