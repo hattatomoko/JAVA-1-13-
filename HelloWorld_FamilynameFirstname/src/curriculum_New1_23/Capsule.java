@@ -17,29 +17,29 @@ public class Capsule {
 	private int speed;
 
 
-	public Capsule(String name,double bodylength,int speed) {
-		this.name = name;
-		this.bodylength = bodylength;
-		this.speed =  speed;
-	}
-
 	public String getName() {
 		return this.name;
+	}
+		
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public double getBodylength() {
 		return this.bodylength;
 	}
-
+	
+	public void setBodylength(double bodylength) {
+		this.bodylength = bodylength;
+	}
+	
 	public int getSpeed() {
 		return this.speed;
 	}
-
-	public static void main(String[] args) {
-		Capsule capsule = new Capsule("ライオン",2.1,80);
-		System.out.println("動物名:" + capsule.getName());
-		System.out.println("体長:" + capsule.getBodylength() + "m");
-		System.out.println("速度:" + capsule.getSpeed() + "km/h");
+	public void setSpeed(int speed) {
+		this.speed = speed;
 	}
+
+	
 }
 
