@@ -48,64 +48,59 @@ public class Curriculum_New_1_27 {
 
 
 		 */
-
+		// 文字を入力する		
 		Scanner scan = new Scanner(System.in);
 		String str = scan.next();
 		System.out.println("コンソールに文字を入力してください");
-
+		
+		// Animalクラスを呼び出し
 		Animal animal = new Animal();
 
+		// コンソールに入力した文字を切り離す		
+		String Appliances[] = str.split(",");
+		for(int i =0; i<Appliances.length; i++) {
+			
+			//例えばライオン:2.1:80を ; で切り離す
+			String information[] = Appliances[i].split(":");
+			//名前		
+			animal.setName(information[0]);
+			//体長
+			animal.setBodylength(Double.valueOf(information[1]));
+			//速度
+			animal.setSpeed(Integer.valueOf(information[2]));
 
+			switch(information[0]){
+			case "ライオン":
+				animal.setScientfic("パンテラ レオ\r\n");
+				break;
 
-		switch(str){
-		case "ライオン:2.1:80":
-			animal.setName("ライオン");
-			animal.setBodylength(2.1);
-			animal.setSpeed(80);
-			animal.setScientfic("パンテラ レオ");
-			break;
+			case "ゾウ":
+				animal.setScientfic("ロキソドンタ・サイクロティス\r\n");
+				break;
 
-		case "ゾウ:3.2:40":
-			animal.setName("ゾウ");
-			animal.setBodylength(3.2);
-			animal.setSpeed(40);
-			animal.setScientfic("ロキソドンタ・サイクロティス");
-			break;
+			case "パンダ":
+				animal.setScientfic("アイルロポダ・メラノレウカ\r\n");
+				break;
 
-		case "パンダ:1.9:30":
-			animal.setName("パンダ");
-			animal.setBodylength(1.9);
-			animal.setSpeed(30);
-			animal.setScientfic("アイルロポダ・メラノレウカ");
-			break;
+			case "チンパンジー":
+				animal.setScientfic("パン・トゥログロディテス\r\n");
+				break;   
 
-		case "チンパンジー:0.94:25":
-			animal.setName("チンパンジー");
-			animal.setBodylength(0.94);
-			animal.setSpeed(25);
-			animal.setScientfic("パン・トゥログロディテス");
-			break;   
+			case "シマウマ":
+				animal.setScientfic("チャップマンシマウマ\r\n");
+				break;   
 
-		case "シマウマ:2.4:65":
-			animal.setName("シマウマ");
-			animal.setBodylength(2.4);
-			animal.setSpeed(65);
-			animal.setScientfic("チャップマンシマウマ");
-			break;   
+			case "インコ":
+				animal.setScientfic("不明");
+				break;
+			}
+			System.out.println("動物名:" + animal.getName());
+			System.out.println("体長:" + animal.getBodylength() + "m");
+			System.out.println("速度:" + animal.getSpeed() + "km/h");
+			System.out.println("学名:" + animal.getScientfic());
+			scan.close();		
 
-		case "インコ:0.1:50":
-			animal.setName("インコ");
-			animal.setBodylength(0.1);
-			animal.setSpeed(50);
-			animal.setScientfic("不明");
-			break;   
 		}
-		System.out.println("動物名:" + animal.getName());
-		System.out.println("体長:" + animal.getBodylength() + "m");
-		System.out.println("速度:" + animal.getSpeed() + "km/h");
-		System.out.println("学名:" + animal.getScientfic());
-		scan.close();		
 
 	}
-
 }
