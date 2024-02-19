@@ -1,6 +1,7 @@
 package curriculum_New_1_29;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 import sort.Sort;
@@ -25,6 +26,17 @@ public class Curriculum_New_1_29 {
 		// 入力する準備
 		Scanner scan = new Scanner(System.in);
 		String str = scan.next();
+		
+		//String型の変数同士の時はequalsを使う
+		boolean isAscendingorder;
+		
+		if(str.equals ("昇順")) {
+			isAscendingorder = true;
+		}else {
+			isAscendingorder = false;
+		}
+		
+		str = scan.next();
 
 		// ソートクラスをインスタンス化
 		Sort sort = new Sort();
@@ -33,15 +45,20 @@ public class Curriculum_New_1_29 {
 		String Appliances[] = str.split(",");
 		int dl=Appliances.length;
 		// int型のd　配列の宣言
-		int []d=new int[dl];
+		Integer []d=new Integer[dl];
 
 		// 入力された文字分だけ出力
 		for(int i =0; i<Appliances.length; i++) {
 			d[i]=Integer.parseInt(Appliances[i]);
 
 		}
-		// 昇順に並べる
-		Arrays.sort(d);
+		// 昇順降順に並べる
+		if(isAscendingorder) {
+		    Arrays.sort(d);
+		}else {
+		    Arrays.sort(d,Collections.reverseOrder());
+		}
+		
 
 		// 県名、県庁所在地、面積を配列に入れる
 		String[] information = {"北海道:札幌市:83424","青森県:青森市:9646","岩手県:盛岡市:15275","宮城県:仙台市:7282","秋田県:秋田市:11638","山形県:山形市:9323","福島県:福島市:13784","茨城県:水戸市:6097","栃木県:宇都宮市:6408","群馬県:前橋市:6362","埼玉県:さいたま市:3798"};
@@ -80,7 +97,7 @@ public class Curriculum_New_1_29 {
 
 			System.out.println("都道府県名:" + sort.getPrefectures());
 			System.out.println("県庁所在地:" + sort.getPrefectoralcapital());
-			System.out.println("面積:" + sort.getArea1() + "㎢");	
+			System.out.println("面積:" + sort.getArea1() + "㎢ \r\n");	
 		}
 		scan.close();	
 	}
