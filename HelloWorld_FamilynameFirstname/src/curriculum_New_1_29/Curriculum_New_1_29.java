@@ -9,7 +9,6 @@ import sort.Sort;
 public class Curriculum_New_1_29 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 
 		/*0, "北海道:札幌市:83424"
 		1, "青森県:青森市:9646"
